@@ -18,7 +18,7 @@ export default function Gallery() {
             breakpoint: 1440,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 0,
+                slidesToScroll: 1,
             }
             },
             {
@@ -30,6 +30,13 @@ export default function Gallery() {
             },
             {
             breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+            },
+            {
+            breakpoint: 700,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -47,16 +54,16 @@ export default function Gallery() {
     ]
 
     return (
-        <section className="relative overflow-hidden bg-white py-12 lg:py-20">
+        <section className="relative overflow-hidden bg-white space-y-24 md:space-y-40 py-12 lg:py-20">
             {/* Gallery section */}
             {/*<h2 className="text-3xl md:text-4xl text-blue-800 font-publicsans font-semibold px-10 md:px-5 pb-6">Galería</h2>*/}
 
             {/* Carousel section */}
-            <div className="w-full relative overflow-visible bg-white mx-auto px-6 md:px-0 lg:px-0 pb-12 lg:pb-20">
+            <div className="w-full relative overflow-visible bg-white mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
                         <div key={index} className="justify-center">
-                            <div className="group relative w-96 h-110 overflow-hidden rounded-2xl mx-auto">
+                            <div className="group relative w-90 md:w-96 lg:w-100 h-110 md:h-115 lg:h-120 overflow-hidden rounded-2xl mx-auto">
                                 <img src={slide.img} alt={`${index}`} className="w-full h-full object-cover rounded-xl"/>
                                 <div className="absolute inset-0 flex flex-col justify-end bg-black/60 space-y-2 p-6 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h2 className="text-lg text-white font-montserrat font-semibold drop-shadow-lg">{slide.title}</h2>
@@ -69,7 +76,7 @@ export default function Gallery() {
             </div>
 
             {/* Alternative section */}
-            <div className="flex flex-col lg:flex-row items-center justify-center pt-12 lg:pt-20 px-10 lg:px-20">  
+            <div className="flex flex-col lg:flex-row items-center justify-center px-8 md:px-14 lg:px-20">  
                 <div className="lg:w-3/5 flex-1 items-center justify-center space-y-3 lg:px-10 pb-6 lg:pb-0">
                     <h1 className="text-3xl lg:text-4xl font-bold font-publicsans bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Alternative title</h1>
                     <h2 className="lg:text-lg text-gray-400 font-medium font-publicsans">Lorem Ipsum is simply dummy text</h2>

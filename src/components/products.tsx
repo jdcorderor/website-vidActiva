@@ -26,6 +26,13 @@ export default function Products() {
             {
             breakpoint: 768,
             settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+            },
+            {
+            breakpoint: 700,
+            settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
             }
@@ -54,7 +61,7 @@ export default function Products() {
     return (
         <section id="productos" className="relative overflow-hidden bg-white py-12 lg:py-20 lg:px-20">
             {/* Products section */}
-            <div className="flex items-center justify-center px-12 md:px-20">
+            <div className="w-full flex items-center justify-center px-24 md:px-20">
                 <h1 className="text-4xl lg:text-5xl font-bold font-publicsans bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent text-center">Productos de Calidad</h1>
             </div>
 
@@ -62,7 +69,7 @@ export default function Products() {
             <div className="w-full relative overflow-visible bg-white px-6 md:px-10 mx-auto mt-8 md:mt-12 lg:mt-16">
                 <Slider {...settings}>
                     {products.map((product, index) => (
-                        <div key={product.id} onMouseOver={() => { if (!flippedStates[index]) { handleFlip(index) } }} onMouseLeave={() => { if (flippedStates[index]) { handleFlip(index) }} } className="min-h-[300px] justify-center rounded-2xl px-3">
+                        <div key={product.id} onMouseOver={() => { if (!flippedStates[index]) { handleFlip(index) } }} onMouseLeave={() => { if (flippedStates[index]) { handleFlip(index) }} } className="min-h-[300px] justify-center rounded-2xl [@media(min-width:700px)]:px-3">
                             <FlipCard isFlipped={flippedStates[index]} frontContent={<ProductFront product={product} />} backContent={<ProductBack product={product} />}/>
                         </div>
                     ))}

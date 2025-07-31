@@ -18,21 +18,28 @@ export default function About() {
             breakpoint: 1440,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 0,
+                slidesToScroll: 1,
             }
             },
             {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 0,
+                slidesToScroll: 1,
             }
             },
             {
             breakpoint: 768,
             settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+            },
+            {
+            breakpoint: 700,
+            settings: {
                 slidesToShow: 1,
-                slidesToScroll: 0,
+                slidesToScroll: 1,
             }
             },
         ]
@@ -62,7 +69,7 @@ export default function About() {
     return (
         <section id="nosotros" className="relative overflow-hidden bg-white">
             {/* About us section */}
-            <div className="flex flex-col lg:flex-row items-center justify-center py-12 lg:py-20 px-4 lg:px-20">
+            <div className="flex flex-col lg:flex-row items-center justify-center py-12 lg:py-20 px-0 md:px-10 lg:px-20 mt-8">
                 <div className="hidden md:flex flex-1 md:w-full lg:w-2/5 items-center justify-center">
                     <img src="https://media.istockphoto.com/id/168623510/es/foto/familia-para-trotar.jpg?s=612x612&w=0&k=20&c=CD_-xBKSapPdQFgF24ndIIf9Ng9T89QIF6cOgobRsh0=" alt="" className="rounded-full overflow-hidden" width={300} height={300}/>
                 </div>
@@ -74,11 +81,11 @@ export default function About() {
             </div>
 
             {/* Carousel section */}
-            <div className="w-full relative bg-white overflow-visible mx-auto py-12 lg:py-20 px-6 md:px-0 lg:px-0">
+            <div className="w-full relative bg-white overflow-visible py-8 lg:py-20 md:px-0 lg:px-0 mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
                         <div key={index} className="justify-center">
-                            <div className="relative w-96 h-110 overflow-hidden rounded-2xl mx-auto">
+                            <div className="relative w-90 md:w-96 lg:w-100 h-110 md:h-115 lg:h-120 overflow-hidden rounded-2xl mx-auto">
                                 <img src={slide.src} alt={`${index}`} className="w-full h-full object-cover rounded-xl"/>
                                 <div className="absolute inset-0 flex items-end justify-start bg-black/40">
                                     <h2 className="w-1/4 text-3xl text-white font-montserrat font-semibold drop-shadow-lg py-6 pl-6">{slide.text}</h2>
@@ -90,7 +97,7 @@ export default function About() {
             </div>
 
             {/* Values section */}
-            <div id="valores" className="flex flex-col items-center justify-center space-y-10 py-10 lg:py-20 px-10 md:px-15 lg:px-20">
+            <div id="valores" className="flex flex-col items-center justify-center space-y-10 py-10 lg:py-20 px-8 md:px-15 lg:px-20">
                 <div className="w-full items-center space-y-6 px-0 md:px-5 lg:px-20">
                     <h1 className="text-3xl lg:text-4xl font-bold font-publicsans bg-[#0EA5E9] bg-clip-text text-transparent">Nuestros valores</h1>
                     <p className="text-sm lg:text-base text-justify opacity-80">
@@ -110,11 +117,11 @@ export default function About() {
 
             {/* Visit us section */}
             <div className="w-full relative overflow-hidden py-12 lg:py-20 mx-auto">
-                <img src="https://b2399578.smushcdn.com/2399578/wp-content/uploads/2019/12/iStock-1041010724.jpg?lossy=1&strip=1&webp=1" className="w-full h-70 lg:h-95 object-cover" />
-                <div className="absolute inset-0 h-70 lg:h-95 flex flex-col items-center justify-center bg-black/70 space-y-4 py-4 translate-y-12 lg:translate-y-20">
-                    <h2 className="text-4xl lg:text-5xl text-center text-white font-publicsans font-bold drop-shadow-lg">Juntos en EduActiva</h2>
+                <img src="https://b2399578.smushcdn.com/2399578/wp-content/uploads/2019/12/iStock-1041010724.jpg?lossy=1&strip=1&webp=1" className="w-full h-55 md:h-70 lg:h-95 object-cover" />
+                <div className="absolute inset-0 h-55 md:h-70 lg:h-95 flex flex-col items-center justify-center bg-black/70 space-y-4 py-4 translate-y-12 lg:translate-y-20">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl text-center text-white font-publicsans font-bold drop-shadow-lg">Juntos en EduActiva</h2>
                     <p className="md:text-lg lg:text-xl text-center text-white font-inter font-medium">Visítanos y descubre nuestros procesos</p>
-                    <a href="/visitas" className="lg:text-lg text-white font-bold hover:font-extrabold bg-[#022D90] hover:bg-[#0140c2] transition-all duration-300 py-2 px-12 mt-4 rounded-3xl cursor-pointer">Ver más</a>
+                    <a href="/visitas" className="text-sm md:text-base lg:text-lg text-black font-bold hover:font-extrabold bg-white hover:bg-gray-200 transition-all duration-300 py-2 px-12 mt-2 md:mt-4 rounded-3xl cursor-pointer">Ver más</a>
                 </div>
             </div>
         </section>

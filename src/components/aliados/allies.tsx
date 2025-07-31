@@ -37,12 +37,12 @@ export default function Allies() {
         <section className="bg-white">
             {/* Navigator */}
             <nav className="w-full flex fixed items-center justify-between px-6 md:px-8 lg:px-10 py-6 z-10 backdrop-blur-3xl bg-white/80">
-                <a href="../" className="flex items-center justify-start"><img src="/logo.png" alt="vidActiva" className="w-[80px] h-auto" /></a>
+                <a href="../" className="flex items-center justify-start"><img src="/logo.png" alt="vidActiva" className="w-[60px] md:w-[80px] h-auto" /></a>
             </nav>
 
             {/* Allies guidance */}
-            <div className="p-6 lg:px-20 py-40 mx-4 lg:mx-6">
-                <h1 className="text-4xl md:text-5xl font-publicsans font-bold pb-6 border-b border-gray-100 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">¿Quieres ser un aliado de vidActiva?</h1>
+            <div className="p-6 lg:px-20 py-40 mx-2 lg:mx-6">
+                <h1 className="text-4xl md:text-5xl font-publicsans font-bold pb-4 border-b border-gray-100 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">¿Quieres ser un aliado de vidActiva?</h1>
                 <p className="text-sm md:text-base text-justify opacity-80 py-6">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
                     When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
@@ -50,13 +50,13 @@ export default function Allies() {
 
                 <div className="w-full flex flex-col py-6 lg:py-8 px-10 lg:px-20 mt-8 bg-gray-50 rounded-xl">
                     {steps.map((step) => (
-                    <div key={step.id} className="flex flex-col md:flex-row items-center gap-5 md:gap-8 lg:gap-6 py-10 md:py-6">
-                        <div className="w-20 md:w-24 lg:w-22 h-20 flex items-center justify-center border border-blue-100 bg-[#022D90] rounded-full">
+                    <div key={step.id} className="flex flex-col [@media(min-width:700px)]:flex-row items-center gap-5 [@media(min-width:700px)]:gap-8 lg:gap-6 py-10 [@media(min-width:700px)]:py-6">
+                        <div className="w-20 [@media(min-width:700px)]:w-24 [@media(min-width:840px)]:w-22 h-20 flex items-center justify-center border border-blue-100 bg-[#022D90] rounded-full">
                             <span className="text-4xl font-extrabold text-white">{step.id}</span>
                         </div>
-                        <div className="w-full h-20 space-y-2 text-center md:text-left">
-                            <h2 className="text-xl lg:text-2xl lg:text-4xl font-semibold text-[#022D90]">{step.title}</h2>
-                            <p className="text-sm lg:text-base lg:text-lg opacity-90 leading-relaxed">{step.description}</p>
+                        <div className="w-full h-20 space-y-2 text-center [@media(min-width:700px)]:text-left">
+                            <h2 className="text-xl [@media(min-width:700px)]:text-2xl [@media(min-width:800px)]:text-4xl font-semibold text-[#022D90]">{step.title}</h2>
+                            <p className="text-sm md:text-base lg:text-lg opacity-90 leading-relaxed">{step.description}</p>
                         </div>
                     </div>
                     ))}

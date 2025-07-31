@@ -19,12 +19,12 @@ export default function Footer() {
         <section className="bg-[#F7F7F7] text-gray-600 py-8">
             <div className="w-full flex flex-wrap items-center justify-center md:justify-between py-12 mx-auto">             
                 {/* Decoration */}
-                <div className="hidden lg:flex w-1/5 relative overflow-hidden z-10">
+                <div className="hidden lg:flex w-1/5 relative overflow-hidden -translate-x-25 z-10">
                     <img src="https://pngimg.com/d/water_PNG50134.png" className="w-full h-full object-contain"/>
                 </div>
                 
                 {/* Links */}
-                <div className="w-full lg:w-2/5 grid grid-cols-3 gap-4 mx-auto px-24 md:px-32 lg:px-0">
+                <div className="w-full lg:w-2/5 grid grid-cols-3 gap-4 mx-auto px-16 md:px-32 lg:px-0">
                     {links.map((link, index) => (
                         <a key={index} href={link.href} className="text-sm text-center font-inter font-medium hover:font-semibold transition-colors duration-200">{link.text}</a>
                     ))}

@@ -33,11 +33,11 @@ export default function Contact() {
     };
 
     return (
-        <section id="contacto" className="relative overflow-hidden bg-white mx-10 lg:mx-40 py-12 lg:py-20">
+        <section id="contacto" className="relative overflow-hidden bg-white mx-7 md:mx-10 lg:mx-40 py-12 lg:py-20">
             {/* Contact section */}
-            <div className="flex flex-col md:flex-row items-start justify-between gap-6 lg:gap-16 px-6 lg:px-10">
+            <div className="flex flex-col md:flex-row items-start justify-between gap-6 lg:gap-16 lg:px-10">
                 {/* Contact info */}
-                <div className="flex-1 md:w-1/2 lg:w-2/5 space-y-4">
+                <div className="flex-1 md:w-1/2 flex flex-col justify-center space-y-4 md:px-6 lg:px-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-black font-publicsans font-semibold">Contáctanos</h2>
                     <div className="py-4 lg:py-6">
                         <p className="text-sm lg:text-base font-inter text-justify">
@@ -45,7 +45,7 @@ export default function Contact() {
                             Nuestro equipo está listo para ayudarte.
                         </p>
                     </div> 
-                    <div className="bg-gray-100 space-y-1 p-4 rounded-lg">
+                    <div className="bg-gray-100 space-y-1 p-3 md:p-4 rounded-lg">
                         <h4 className="text-base md:text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
                         <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Dirección:</span> Calle 123, Ciudad, País</p>
                         <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Teléfono:</span> +58 424-4483713</p>
@@ -55,7 +55,7 @@ export default function Contact() {
                 </div>
 
                 {/* Contact form */}
-                <div className="w-full md:w-1/2 lg:w-3/5 flex justify-center font-inter">
+                <div className="w-full md:w-1/2 flex justify-center font-inter">
                     <form onSubmit={handleSubmit} className="w-full md:w-4/5 lg:w-3/5 flex flex-col space-y-2 py-4">
                         <label htmlFor="name">Nombre completo *</label>
                         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Nombre completo" required />

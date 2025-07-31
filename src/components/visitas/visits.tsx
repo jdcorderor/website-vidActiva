@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
-import { NextArrowDark } from "../ui/arrows";
+import { FaSearch, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 export default function Visits() {
     // States for dates array and selected date
@@ -166,12 +165,12 @@ export default function Visits() {
             
                 {/* Search bar */}
                 <div className="w-full flex flex-row items-center justify-end md:px-6">
-                    <input type="text" placeholder="Buscar..." className="search flex w-60 md:w-90 bg-white outline-none text-sm text-gray-700 border border-gray-300 rounded-full px-6 py-2 my-auto" value={keyword} onChange={(e) => setKeyword(e.target.value)}/><FaSearch className="w-10 h-5 text-gray-500 flex-shrink-0" />
+                    <input type="text" placeholder="Buscar..." className="search flex w-40 md:w-60 lg:w-90 bg-white outline-none text-sm text-gray-700 border border-gray-300 rounded-full px-6 py-2 my-auto" value={keyword} onChange={(e) => setKeyword(e.target.value)}/><FaSearch className="w-10 h-5 text-gray-500 flex-shrink-0" />
                 </div>
             </nav>
             
             {/* Calendar section */}
-            <div className="w-full justify-center overflow-hidden px-3 md:px-12 lg:px-8 pt-36 pb-15">
+            <div className="w-full justify-center overflow-hidden px-[0.2rem] [@media(min-width:700px)]:px-14 lg:px-8 pt-36 pb-15">
                 <div className="text-center my-2">
                     <p className="text-lg text-gray-800 font-semibold">
                         {selectedDate ? (selectedDate.toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'})) : (new Date().toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}))}
@@ -180,7 +179,7 @@ export default function Visits() {
 
                 <div className="w-full flex items-center justify-center p-8">
                     <button className="w-12 h-12 transform text-gray-300 text-2xl rounded-full p-2 cursor-pointer" aria-label="Scroll left" onClick={() => document.querySelector('.scroll-container')?.scrollBy({ left: -192, behavior: 'smooth' })}>
-                        ◀
+                        <FaArrowLeft></FaArrowLeft>
                     </button>
 
                     <div className="w-full lg:w-1/3 flex space-x-4 pl-4 mx-4 overflow-hidden scroll-container scroll-smooth border border-white">
@@ -199,20 +198,20 @@ export default function Visits() {
                     </div>
 
                     <button className="w-12 h-12 transform text-gray-300 text-2xl rounded-full p-2 cursor-pointer" aria-label="Scroll right" onClick={() => document.querySelector('.scroll-container')?.scrollBy({ left: 192, behavior: 'smooth' })}>
-                        ▶
+                        <FaArrowRight></FaArrowRight>
                     </button>
                 </div>
             </div>
 
             {/* Visits section */}
-            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 py-8 mx-12 my-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
+            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 py-4 mx-8 lg:mx-12 my-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
             <div className="flex bg-gray-50 rounded-lg px-8 lg:px-12 mx-8 lg:mx-12 mb-10 lg:mb-20 ">
                 {(filteredVisits.length != 0) && (
                     <div className="w-full grid grid-cols-1 rounded-xl mx-auto">
                         {filteredVisits.map((visit, index) => (
                             <div key={index} className={`w-full flex items-start justify-center md:justify-between gap-4 py-12 ${index != (filteredVisits.length - 1) ? "border-b-1 border-gray-200" : ""}`}>
-                                <div className="w-full flex flex-col md:flex-row lg:flex-row items-center gap-6">
-                                    <img src={visit.img} alt={visit.title} className="md:w-60 md:h-48 lg:w-72 lg:h-50 object-cover rounded-lg shadow"/>
+                                <div className="w-full flex flex-col [@media(min-width:700px)]:flex-row items-center gap-6">
+                                    <img src={visit.img} alt={visit.title} className="[@media(min-width:700px)]:hidden [@media(min-width:800px)]:flex md:w-60 md:h-48 lg:w-72 lg:h-50 object-cover rounded-lg shadow"/>
                                     <div className="w-full font-inter space-y-1 lg:mx-8"> 
                                         <h3 className="font-semibold lg:text-xl">{visit.title}</h3>
                                         <p className="text-xs lg:text-sm text-gray-600">{visit.date.split("-")[2]}/{visit.date.split("-")[1]}/{visit.date.split("-")[0]} - {visit.hour}</p>
@@ -225,8 +224,8 @@ export default function Visits() {
                                         <p><span className="text-xs lg:text-base text-gray-900 font-bold font-publicsans">{visit.guide.split(",")[0]}</span> -{" "}<span className="text-xs lg:text-base text-gray-900 text-sm">{visit.guide.split(",")[1]}</span></p>
                                     </div>
 
-                                    <div className="lg:w-full md:h-48 lg:h-50 lg:px-6">
-                                        <div className="flex items-end justify-end">
+                                    <div className="w-full md:w-1/2 lg:w-full [@media(min-width:700px)]:h-48 lg:h-50 lg:px-6">
+                                        <div className="flex items-start justify-end">
                                             <a href="/eventos" className="text-center text-white text-xs font-plusjakarta font-medium bg-[#003366] hover:bg-[#022D90] transition-colors duration-300 rounded-full px-8 py-2 cursor-pointer">Book now</a>
                                         </div>
                                     </div>

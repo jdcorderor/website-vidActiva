@@ -60,7 +60,7 @@ export default function Banner() {
             </div>
 
             {/* Hero section */}
-            <div className="relative flex flex-col md:flex-row h-90 md:h-150 pt-12 my-5 z-10">
+            <div className="relative flex flex-col md:flex-row h-90 md:h-150 pt-8 md:pt-12 my-2 md:my-4 z-10">
                 <div>
                     <img src="/decoration.png" className="hidden lg:block relative -translate-x-10 -translate-y-20 z-15" width={400} height={400} />
                 </div>

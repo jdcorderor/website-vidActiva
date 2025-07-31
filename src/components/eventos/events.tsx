@@ -20,6 +20,9 @@ export default function Events() {
     // State to manage keyword
     const [keyword, setKeyword] = useState<string>("");
 
+    // State to manage slider (for mobile)
+    const [showSlider, setShowSlider] = useState<boolean>(false);
+
     // Mock data for events
     const events = [
         {   
@@ -102,38 +105,38 @@ export default function Events() {
     return (
         <section className="bg-white">
             {/* Navigator */}
-            <nav className="w-full flex fixed items-center justify-between px-6 md:px-8 lg:px-10 py-6 z-10 backdrop-blur-3xl bg-white/80">
+            <nav className="w-full flex fixed items-center justify-between px-6 md:px-8 lg:px-10 py-6 z-10 backdrop-blur-3xl bg-white/80" onClick={() => { setShowSlider(false); }}>
                 <a href="../" className="flex items-center justify-start"><img src="/logo.png" alt="vidActiva" className="w-[80px] h-auto" /></a>
             
                 {/* Search bar */}
                 <div className="w-full flex flex-row items-center justify-end md:px-6">
-                    <input type="text" placeholder="Buscar..." className="search flex w-60 md:w-90 bg-white outline-none text-sm text-gray-700 border border-gray-300 rounded-full px-6 py-2 my-auto" value={keyword} onChange={(e) => setKeyword(e.target.value)}/><FaSearch className="w-10 h-5 text-gray-500 flex-shrink-0" />
+                    <input type="text" placeholder="Buscar..." className="search flex w-40 md:w-60 lg:w-90 bg-white outline-none text-sm text-gray-700 border border-gray-300 rounded-full px-6 py-2 my-auto" value={keyword} onChange={(e) => setKeyword(e.target.value)}/><FaSearch className="w-10 h-5 text-gray-500 flex-shrink-0" />
                 </div>
             </nav>
 
             {/* Selected event section */}
-            <div className="w-full flex px-6 md:px-20 pt-40 pb-15 mx-auto">
+            <div className="w-full flex px-4 [@media(min-width:700px)]:px-20 pt-40 pb-15 mx-auto" onClick={() => { setShowSlider(true); }}>
                 {selectedEvent && events[parseInt(selectedEvent) - 1] && (
-                    <div className="group relative w-200 mx-auto rounded-2xl">
+                    <div className="group relative w-200 mx-auto rounded-2xl" >
                         <img src={events[parseInt(selectedEvent) - 1].img} alt={events[parseInt(selectedEvent) - 1].title} className="mx-auto rounded-xl"/>
-                        <div className="absolute inset-0 flex flex-col justify-end rounded-xl px-4 md:px-6 lg:px-8 md:py-1 lg:py-2 mx-auto bg-black/60">
-                            <div className="py-4 lg:py-6">
-                                <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-montserrat font-semibold drop-shadow-lg">
+                        <div className="absolute inset-0 flex flex-col justify-end rounded-xl px-4 [@media(min-width:700px)]:px-6 [@media(min-width:840px)]:px-8 [@media(min-width:700px)]:py-1 [@media(min-width:840px)]:py-2 mx-auto bg-black/60">
+                            <div className="py-4 [@media(min-width:840px)]:py-6">
+                                <h2 className="text-xl [@media(min-width:700px)]:text-2xl [@media(min-width:840px)]:text-3xl text-white font-montserrat font-semibold drop-shadow-lg">
                                     {events[parseInt(selectedEvent) - 1].title}
                                 </h2>
-                                <p className="text-xs md:text-base text-white font-semibold font-montserrat mt-2">
+                                <p className="text-xs [@media(min-width:700px)]:text-base text-white font-semibold font-montserrat mt-2">
                                     {events[parseInt(selectedEvent) - 1].date}
                                 </p>
                             </div>
                         </div>
-                        <div className="absolute inset-0 flex flex-col justify-between bg-[#003366] md:p-4 md:space-y-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="text-center font-bold px-16 pt-8 md:pt-16">    
-                                <p className="text-white md:text-xl lg:text-2xl font-publicsans">{events[parseInt(selectedEvent) - 1].description}</p>
+                        <div className={`absolute inset-0 flex flex-col justify-between bg-[#003366] [@media(min-width:700px)]:p-4 [@media(min-width:700px)]:space-y-2 rounded-xl transition-opacity duration-300 ${showSlider ? 'opacity-100' : 'opacity-0'} md:opacity-0 md:group-hover:opacity-100`}>
+                            <div className="text-center font-bold px-10 [@media(min-width:700px)]:px-16 pt-6 [@media(min-width:700px)]:pt-8 [@media(min-width:840px)]:pt-16">    
+                                <p className="text-white text-[0.7rem] [@media(min-width:700px)]:text-xl [@media(min-width:840px)]:text-2xl font-publicsans">{events[parseInt(selectedEvent) - 1].description}</p>
                             </div>
                             <Slider {...settings}>
-                                <div className="w-full text-white justify-center px-20">
-                                    <h4 className="md:text-lg lg:text-xl font-semibold m-2">Purposes</h4>
-                                    <div className="text-xs md:text-sm lg:text-lg mx-6 mb-4">
+                                <div className="w-full text-white justify-center px-12 [@media(min-width:700px)]:px-20">
+                                    <h4 className="text-[0.6rem] [@media(min-width:700px)]:text-lg [@media(min-width:840px)]:text-xl font-semibold m-2">Purposes</h4>
+                                    <div className="text-[0.5rem] [@media(min-width:700px)]:text-sm [@media(min-width:840px)]:text-lg mx-6 mb-4">
                                         <ul>
                                             {events[parseInt(selectedEvent) - 1].purpose.map((item, index) => (
                                                 <li key={index} className="list-disc">{item}</li>
@@ -142,9 +145,9 @@ export default function Events() {
                                     </div>
                                 </div>
                                 
-                                <div className="w-full text-white justify-center px-20">
-                                    <h4 className="md:text-lg lg:text-xl font-semibold m-2">Target public</h4>
-                                    <div className="text-xs md:text-sm lg:text-lg text-lg mx-6 mb-4">
+                                <div className="w-full text-white justify-center px-12 [@media(min-width:700px)]:px-20">
+                                    <h4 className="text-[0.6rem] [@media(min-width:700px)]:text-lg [@media(min-width:840px)]:text-xl font-semibold m-2">Target public</h4>
+                                    <div className="text-[0.5rem] [@media(min-width:700px)]:text-sm [@media(min-width:840px)]:text-lg mx-6 mb-4">
                                         <ul>
                                             {events[parseInt(selectedEvent) - 1].target.map((item, index) => (
                                                 <li key={index} className="list-disc">{item}</li>
@@ -153,9 +156,9 @@ export default function Events() {
                                     </div>
                                 </div>
 
-                                <div className="w-full text-white justify-center px-20">
-                                    <h4 className="md:text-lg lg:text-xl font-semibold m-2">About</h4>
-                                    <div className="text-xs md:text-sm lg:text-lg text-lg mx-6 mb-4">
+                                <div className="w-full text-white justify-center px-12 [@media(min-width:700px)]:px-20">
+                                    <h4 className="text-[0.6rem] [@media(min-width:700px)]:text-lg [@media(min-width:840px)]:text-xl font-semibold m-2">About</h4>
+                                    <div className="text-[0.5rem] [@media(min-width:700px)]:text-sm [@media(min-width:840px)]:text-lg mx-6 mb-4">
                                         <ul>
                                             {events[parseInt(selectedEvent) - 1].details.map((item, index) => (
                                                 <li key={index} className="list-disc">{item}</li>
@@ -165,7 +168,7 @@ export default function Events() {
                                 </div>
                             </Slider>
                             <div className="flex justify-center mb-4">
-                                <a href="/eventos" className="text-center text-black text-xs lg:text-sm font-plusjakarta font-medium bg-[#FFFFFF] transition-colors duration-300 rounded-full px-8 py-2 cursor-pointer">Book now</a>
+                                <a href="/eventos" className="text-center text-black text-[0.5rem] [@media(min-width:700px)]:text-xs [@media(min-width:840px)]:text-sm font-plusjakarta font-medium bg-[#FFFFFF] transition-colors duration-300 rounded-full px-8 py-1 [@media(min-width:700px)]:py-2 cursor-pointer">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -173,9 +176,9 @@ export default function Events() {
             </div>
             
             {/* Events section */}
-            <div className="p-6 lg:px-20 lg:py-20">
-                <h1 className="text-4xl font-publicsans font-bold lg:px-2 pb-6 lg:mx-6 border-b border-gray-100 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximos eventos</h1>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:gap-x-4 mx-auto">
+            <div className="p-4 lg:px-20 lg:py-20" onClick={() => { setShowSlider(false); }}>
+                <h1 className="text-4xl font-publicsans font-bold lg:px-2 pb-4 lg:mx-6 border-b border-gray-100 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximos eventos</h1>
+                <div className="grid grid-cols-1 [@media(min-width:700px)]:grid-cols-2 [@media(min-width:840px)]:grid-cols-3 [@media(min-width:700px)]:gap-x-4 mx-auto">
                     {(filteredEvents.length != 0) && filteredEvents.map((event, index) => (
                         <div key={index} className={`${event.id.toString() === selectedEvent ? "hidden" : "flex flex-col"} rounded-xl transition-colors duration-300  bg-[#F8F8F8] p-4 lg:p-8 my-4 lg:m-6`} onClick={() => { setSelectedEvent(event.id.toString()); window.scrollTo({ top: 0, behavior: "smooth" }) }}>
                             <img src={event.img} alt={event.title} className="w-full h-50 object-cover rounded-xl mb-"/>

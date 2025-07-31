@@ -10,14 +10,14 @@ export default function Allies() {
     return (
         <section id="aliados" className="relative overflow-hidden bg-white py-12 lg:py-20">
             {/* Allies section */}
-            <div className="flex items-center justify-center px-15 md:px-20">
-                <h1 className="text-4xl lg:text-5xl font-bold font-publicsans bg-black bg-clip-text text-transparent text-center">Sé parte de nuestros aliados</h1>
+            <div className="flex items-center justify-center px-12 md:px-20">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-publicsans bg-black bg-clip-text text-transparent text-center">Sé parte de nuestros aliados</h1>
             </div>
 
             {/* Grid section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 px-10 md:px-20 mt-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 px-10 [@media(min-width:700px)]:px-24 md:px-20 mt-10">
                 {allies.map((ally, index) => (
-                    <div key={index} className="justify-center px-20 md:px-10 lg:px-0 py-4 md:py-6 lg:py-8">
+                    <div key={index} className="justify-center px-0 md:px-10 lg:px-0 py-4 md:py-6 lg:py-8">
                         <img src={ally.img} alt={ally.name} />
                     </div>
                 ))}

@@ -70,21 +70,21 @@ export default function Events() {
     };
 
     return (
-        <section className="relative overflow-hidden bg-white py-12 lg:py-20 px-10 md:px-20">
+        <section className="relative overflow-hidden bg-white py-12 lg:py-20 px-8 md:px-20">
             {/* Events section */}
             <h2 className="text-3xl font-publicsans font-semibold pb-6">Próximos eventos</h2>
-            <div className="grid grid-cols-1 bg-[#F8F8F8] rounded-lg gap-8 p-6 mx-auto">
+            <div className="grid grid-cols-1 bg-[#F8F8F8] rounded-lg gap-8 p-4 md:p-6 mx-auto">
                 {events.map((event, index) => index < 3 && (
-                    <div key={index} className="flex flex-col md:flex-row md:space-x-6 p-2">
-                        <div className="flex flex-1 items-center space-x-4">
-                            <img src={event.img} alt={event.title} className="w-20 h-20 object-cover rounded-lg"/>
-                            <div className="items-start justify-start font-inter space-y-1">    
+                    <div key={index} className="flex flex-col [@media(min-width:700px)]:flex-row [@media(min-width:700px)]:space-x-6 p-2">
+                        <div className="flex flex-1 flex-col [@media(min-width:700px)]:flex-row items-center space-y-4 [@media(min-width:700px)]:space-y-0 space-x-0 [@media(min-width:700px)]:space-x-4">
+                            <img src={event.img} alt={event.title} className="max-w-[280px] [@media(min-width:700px)]:w-20 [@media(min-width:700px)]:h-20 object-cover rounded-lg"/>
+                            <div className="w-full items-start justify-start font-inter space-y-1">    
                                 <h3 className="font-semibold">{event.title}</h3>
                                 <p className="text-xs md:text-sm text-gray-600">{event.date}</p>
                                 <p className="text-xs md:text-sm text-gray-800">{event.description}</p>
                             </div>
                         </div>
-                        <div className="flex items-center md:items-start justify-center md:justify-end mt-6 md:mt-0">
+                        <div className="flex items-center [@media(min-width:700px)]:items-start justify-center [@media(min-width:700px)]:justify-end mt-5 [@media(min-width:700px)]:mt-0">
                             <button type="button" onClick={() => { handleClick(event.id) }} className="text-xs md:text-sm font-plusjakarta font-medium bg-[#E9F4FF] hover:bg-[#d3e9ff] hover:font-semibold transition-colors duration-300 px-8 py-2 rounded-full cursor-pointer">Ver detalles</button>
                         </div>
                     </div>
