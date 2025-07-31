@@ -69,12 +69,12 @@ export default function Banner() {
                     <p className="text-sm md:text-base lg:text-lg font-montserrat">Calidad en cada botella, bienestar en cada día.</p>
                     <a href="#valores" className="inline-block text-sm md:text-base lg:text-lg font-semibold hover:font-extrabold bg-[#3D9C55] hover:bg-[#2e7f41] transition-all duration-300 py-2 px-12 rounded-3xl cursor-pointer">Nuestros valores</a>
                 </div>
-                <img src="/banner.png" className="hidden [@media(min-width:700px)]:block relative -translate-y-20 mx-auto z-15" width={390} height={550}  />
+                <img src="/banner.png" className="hidden [@media(min-width:700px)]:block relative -translate-y-60 md:-translate-y-10 lg:-translate-y-20 translate-x-50 md:translate-x-0 lg:translate-x-0 mx-auto z-15 w-[250px] md:w-[300px] lg:w-[390px] h-[350px] md:h-[400px] lg:h-[550px]" />
             </div>
 
             {/* Lower curve */}
             <div className="absolute w-full bottom-0 overflow-hidden leading-none z-0">
-                <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="w-full h-[80px] md:h-[150px]">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="w-full h-[80px] md:h-[130px]">
                     <path d="M0,0 C400,-5 780,150 1100,145 C1100,145 1360,150 1440,120 L1440,150 L0,150 Z" fill="#ffffff"/>
                 </svg>
             </div>
