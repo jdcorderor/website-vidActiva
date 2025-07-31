@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Visits from "../components/visitas/visits.tsx";
+import Footer from "../components/footer.tsx";
+import Loading from "../components/ui/loading.tsx";
+import FadeIn from "../components/ui/fadein.tsx";
+---
+
+<Layout>
+    <Loading client:only />
+    
+    <FadeIn client:only><Visits client:only /></FadeIn>
+    <FadeIn client:only><Footer client:only /></FadeIn>
+</Layout>

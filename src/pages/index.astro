@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/banner.tsx";
+import About from "../components/about.tsx";
+import Products from "../components/products.tsx";
+import Allies from "../components/allies.tsx";
+import Events from "../components/events.tsx";
+import Gallery from "../components/gallery.tsx";
+import Contact from "../components/contact.tsx";
+import Footer from "../components/footer.tsx";
+import Loading from "../components/ui/loading.tsx";
+import Modals from "../components/ui/modals.tsx";
+import FadeIn from "../components/ui/fadein.tsx";
+---
+
+<Layout>
+    <Loading client:only />
+    <Modals client:only />
+
+    <FadeIn client:only ><Banner client:only /></FadeIn>
+    <FadeIn client:only ><About client:only /></FadeIn>
+    <FadeIn client:only ><Products client:only /></FadeIn>
+    <FadeIn client:only ><Allies /></FadeIn>
+    <FadeIn client:only ><Events client:only /></FadeIn>
+    <FadeIn client:only ><Gallery client:only /></FadeIn>
+    <FadeIn client:only ><Contact /></FadeIn>
+    <FadeIn client:only ><Footer /></FadeIn>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Allies from "../components/aliados/allies.tsx";
+import Footer from "../components/footer.tsx";
+import Loading from "../components/ui/loading.tsx";
+import FadeIn from "../components/ui/fadein.tsx";
+---
+
+<Layout>
+    <Loading client:only />
+    
+    <FadeIn client:only><Allies client:only /></FadeIn>
+    <FadeIn client:only><Footer client:only /></FadeIn>
+</Layout>
