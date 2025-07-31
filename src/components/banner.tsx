@@ -69,7 +69,7 @@ export default function Banner() {
                     <p className="text-sm md:text-base lg:text-lg font-montserrat">Calidad en cada botella, bienestar en cada día.</p>
                     <a href="#valores" className="inline-block text-sm md:text-base lg:text-lg font-semibold hover:font-extrabold bg-[#3D9C55] hover:bg-[#2e7f41] transition-all duration-300 py-2 px-12 rounded-3xl cursor-pointer">Nuestros valores</a>
                 </div>
-                <img src="/banner.png" className="hidden md:block relative -translate-y-20 mx-auto z-15" width={390} height={550}  />
+                <img src="/banner.png" className="hidden [@media(min-width:700px)]:block relative -translate-y-20 mx-auto z-15" width={390} height={550}  />
             </div>
 
             {/* Lower curve */}
