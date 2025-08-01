@@ -55,15 +55,12 @@ export default function Gallery() {
 
     return (
         <section className="relative overflow-hidden bg-white space-y-24 md:space-y-40 py-12 lg:py-20">
-            {/* Gallery section */}
-            {/*<h2 className="text-3xl md:text-4xl text-blue-800 font-publicsans font-semibold px-10 md:px-5 pb-6">Galería</h2>*/}
-
             {/* Carousel section */}
             <div className="w-full relative overflow-visible bg-white mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
                         <div key={index} className="justify-center">
-                            <div className="group relative w-90 md:w-96 lg:w-100 h-110 md:h-115 lg:h-120 overflow-hidden rounded-2xl mx-auto">
+                            <div className="group relative w-[22.5rem] h-[27.5rem] md:w-[24rem] md:h-[28.75rem] lg:w-[25rem] lg:h-[30rem] overflow-hidden rounded-2xl mx-auto">
                                 <img src={slide.img} alt={`${index}`} className="w-full h-full object-cover rounded-xl"/>
                                 <div className="absolute inset-0 flex flex-col justify-end bg-black/60 space-y-2 p-6 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h2 className="text-lg text-white font-montserrat font-semibold drop-shadow-lg">{slide.title}</h2>
