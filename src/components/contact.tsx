@@ -37,21 +37,27 @@ export default function Contact() {
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-start justify-between gap-6 lg:gap-16 lg:px-10">
                 {/* Contact info */}
-                <div className="flex-1 md:w-1/2 flex flex-col justify-center space-y-4 md:px-6 lg:px-16">
+                <div className="w-full md:w-1/2 px-0 md:px-6 lg:px-16 flex flex-col justify-center space-y-4">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-black font-publicsans font-semibold">Contáctanos</h2>
+
                     <div className="py-2 md:py-4 lg:py-6">
                         <p className="text-sm lg:text-base font-inter text-justify">
-                            ¿Tienes preguntas o necesitas más información sobre nuestros productos y servicios?
-                            Nuestro equipo está listo para ayudarte.
+                        ¿Tienes preguntas o necesitas más información sobre nuestros productos y servicios?
+                        Nuestro equipo está listo para ayudarte.
                         </p>
-                    </div> 
-                    <div className="hidden md:flex flex-col bg-gray-50 space-y-1 p-3 md:p-4 rounded-lg">
-                        <h4 className="text-base md:text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Dirección:</span> Calle 123, Ciudad, País</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Teléfono:</span> +58 424-4483713</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Correo electrónico:</span> atencion@vidactiva.com</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Horario:</span> Lunes a Viernes, 9:00 AM - 5:00 PM</p>
-                    </div> 
+                    </div>
+
+                    <div className="hidden md:block">
+                        <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+                            <h4 className="text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
+                            <ul className="space-y-1">
+                                <li className="text-sm lg:text-base"><strong>Dirección:</strong> Calle 123, Ciudad, País</li>
+                                <li className="text-sm lg:text-base"><strong>Teléfono:</strong> +58 424-4483713</li>
+                                <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> atencion@vidactiva.com</li>
+                                <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 5:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Contact form */}
@@ -81,12 +87,14 @@ export default function Contact() {
 
                 {/* Alternative contact info */}
                 <div className="w-full flex md:hidden justify-center space-y-4 my-4">
-                    <div className="w-full flex flex-col bg-gray-50 space-y-1 p-4 rounded-lg">
-                        <h4 className="text-base md:text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Dirección:</span> Calle 123, Ciudad, País</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Teléfono:</span> +58 424-4483713</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Correo electrónico:</span> atencion@vidactiva.com</p>
-                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Horario:</span> Lunes a Viernes, 9:00 AM - 5:00 PM</p>
+                    <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+                        <h4 className="text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
+                        <ul className="space-y-1">
+                            <li className="text-sm lg:text-base"><strong>Dirección:</strong> Calle 123, Ciudad, País</li>
+                            <li className="text-sm lg:text-base"><strong>Teléfono:</strong> +58 424-4483713</li>
+                            <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> atencion@vidactiva.com</li>
+                            <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 5:00 PM</li>
+                        </ul>
                     </div>
                 </div> 
             </div>
