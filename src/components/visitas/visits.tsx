@@ -122,7 +122,7 @@ export default function Visits() {
             </nav>
 
             {/* Visits section */}
-            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 pt-36 pb-4 mx-8 lg:mx-12 my-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
+            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 pt-42 pb-4 mx-8 lg:mx-12 mb-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
             <div className="flex bg-gray-50 rounded-lg px-8 lg:px-12 mx-8 lg:mx-12 mb-15 lg:mb-25 ">
                 {(filteredVisits.length != 0) && (
                     <div className="w-full grid grid-cols-1 rounded-xl mx-auto">

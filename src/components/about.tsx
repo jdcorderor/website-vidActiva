@@ -9,11 +9,18 @@ export default function About() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5, 
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
+            {
+            breakpoint: 1920,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+            },
             {
             breakpoint: 1440,
             settings: {
@@ -23,13 +30,6 @@ export default function About() {
             },
             {
             breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-            },
-            {
-            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -81,13 +81,13 @@ export default function About() {
             </div>
 
             {/* Carousel section */}
-            <div className="w-full relative bg-white overflow-visible py-8 lg:py-20 md:px-0 lg:px-0 mx-auto">
+            <div className="w-full relative overflow-visible bg-white py-8 lg:py-20 mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="flex justify-center lg:px-4">
-                            <div className="relative w-full max-w-[25rem] h-[30rem] overflow-hidden rounded-2xl mx-auto">
+                        <div key={index} className="flex justify-center px-4">
+                            <div className="group relative w-full max-w-[25rem] h-[25rem] lg:h-[30rem] overflow-hidden rounded-2xl mx-auto">
                                 <img src={slide.src} alt={`Slide ${index}`} className="w-full h-full object-cover rounded-xl"/>
-                                <div className="absolute inset-0 flex items-end justify-start bg-black/40">
+                                <div className="absolute inset-0 flex items-end justify-start bg-black/40 ">
                                     <h2 className="w-1/4 text-3xl text-white font-montserrat font-semibold drop-shadow-lg py-6 pl-6">{slide.text}</h2>
                                 </div>
                             </div>

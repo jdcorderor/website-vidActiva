@@ -11,11 +11,18 @@ export default function Products() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         nextArrow: <NextArrowDark />,
         prevArrow: <PrevArrowDark />,
         responsive: [
+            {
+            breakpoint: 1920,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+            },
             {
             breakpoint: 1024,
             settings: {
@@ -69,7 +76,7 @@ export default function Products() {
             <div className="w-full relative overflow-visible bg-white px-6 md:px-10 mx-auto mt-8 md:mt-12 lg:mt-16">
                 <Slider {...settings}>
                     {products.map((product, index) => (
-                        <div key={product.id} onMouseOver={() => { if (!flippedStates[index]) { handleFlip(index) } }} onMouseLeave={() => { if (flippedStates[index]) { handleFlip(index) }} } className="min-h-[300px] justify-center rounded-2xl [@media(min-width:700px)]:px-3">
+                        <div key={product.id} onMouseOver={() => { if (!flippedStates[index]) { handleFlip(index) } }} onMouseLeave={() => { if (flippedStates[index]) { handleFlip(index) }} } className="min-h-[300px] justify-center rounded-2xl md:px-3">
                             <FlipCard isFlipped={flippedStates[index]} frontContent={<ProductFront product={product} />} backContent={<ProductBack product={product} />}/>
                         </div>
                     ))}

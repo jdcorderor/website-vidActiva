@@ -9,11 +9,18 @@ export default function Gallery() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         responsive: [
+            {
+            breakpoint: 1840,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+            },
             {
             breakpoint: 1440,
             settings: {
@@ -23,13 +30,6 @@ export default function Gallery() {
             },
             {
             breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-            },
-            {
-            breakpoint: 768,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -59,8 +59,8 @@ export default function Gallery() {
             <div className="w-full relative overflow-visible bg-white mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="justify-center">
-                            <div className="group relative w-[22.5rem] h-[27.5rem] md:w-[24rem] md:h-[28.75rem] lg:w-[25rem] lg:h-[30rem] overflow-hidden rounded-2xl mx-auto">
+                        <div key={index} className="flex justify-center px-4">
+                            <div className="group relative w-full max-w-[25rem] h-[25rem] lg:h-[30rem] overflow-hidden rounded-2xl mx-auto">
                                 <img src={slide.img} alt={`${index}`} className="w-full h-full object-cover rounded-xl"/>
                                 <div className="absolute inset-0 flex flex-col justify-end bg-black/60 space-y-2 p-6 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h2 className="text-lg text-white font-montserrat font-semibold drop-shadow-lg">{slide.title}</h2>
