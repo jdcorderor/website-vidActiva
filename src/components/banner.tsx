@@ -15,7 +15,7 @@ export default function Banner() {
     ]
 
     return (
-        <section className="relative overflow-hidden bg-white text-white">
+        <section id="inicio" className="relative overflow-hidden bg-white text-white">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#022D90] to-[#010D2A] to-[#000511] transition-colors opacity-90 border-b-2 z-0" />
 

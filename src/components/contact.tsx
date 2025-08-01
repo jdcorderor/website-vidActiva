@@ -42,8 +42,8 @@ export default function Contact() {
 
                     <div className="py-2 md:py-4 lg:py-6">
                         <p className="text-sm lg:text-base font-inter text-justify">
-                        ¿Tienes preguntas o necesitas más información sobre nuestros productos y servicios?
-                        Nuestro equipo está listo para ayudarte.
+                            ¿Tienes preguntas o necesitas más información sobre nuestros productos?
+                            Estamos aquí para atenderte. Nuestro equipo está listo para ayudarte con lo que necesites.
                         </p>
                     </div>
 
@@ -51,10 +51,10 @@ export default function Contact() {
                         <div className="bg-gray-50 rounded-lg p-4 space-y-2">
                             <h4 className="text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
                             <ul className="space-y-1">
-                                <li className="text-sm lg:text-base"><strong>Dirección:</strong> Calle 123, Ciudad, País</li>
+                                <li className="text-sm lg:text-base"><strong>Dirección:</strong> Carretera Vieja Tocuyito, Sector Zanjón Dulce, Municipio Libertador, Carabobo</li>
                                 <li className="text-sm lg:text-base"><strong>Teléfono:</strong> +58 424-4483713</li>
-                                <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> atencion@vidactiva.com</li>
-                                <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 5:00 PM</li>
+                                <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> embotelladoraactivaca@gmail.com</li>
+                                <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Sábado, 9:00 AM - 6:00 PM</li>
                             </ul>
                         </div>
                     </div>
@@ -90,10 +90,10 @@ export default function Contact() {
                     <div className="bg-gray-50 rounded-lg p-4 space-y-2">
                         <h4 className="text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
                         <ul className="space-y-1">
-                            <li className="text-sm lg:text-base"><strong>Dirección:</strong> Calle 123, Ciudad, País</li>
+                            <li className="text-sm lg:text-base"><strong>Dirección:</strong> Carretera Vieja Tocuyito, Sector Zanjón Dulce, Municipio Libertador, Carabobo</li>
                             <li className="text-sm lg:text-base"><strong>Teléfono:</strong> +58 424-4483713</li>
-                            <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> atencion@vidactiva.com</li>
-                            <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 5:00 PM</li>
+                            <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> embotelladoraactivaca@gmail.com</li>
+                            <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Sábado, 9:00 AM - 6:00 PM</li>
                         </ul>
                     </div>
                 </div> 

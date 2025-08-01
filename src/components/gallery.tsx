@@ -47,14 +47,30 @@ export default function Gallery() {
 
     // Mock data for gallery images
     const slides = [
-        { title: "Water Treatment Plant Tour", description: "Explore modern water treatment.", img: "https://cdn.hswstatic.com/gif/bottled-water-5.jpg" },
-        { title: "Water Treatment Plant Tour", description: "Explore modern water treatment.", img: "https://media.rnztools.nz/rnz/image/upload/s--G5a20yIh--/c_scale,f_auto,q_auto,w_1050/v1643736132/4O95RKB_copyright_image_120791?_a=BACCd2AD" },
-        { title: "Water Treatment Plant Tour", description: "Explore modern water treatment.", img: "https://cdn.hswstatic.com/gif/gettyimages-520277484.jpg" },
-        { title: "Water Treatment Plant Tour", description: "Explore modern water treatment.", img: "https://media.npr.org/assets/img/2024/01/09/gettyimages-1258833682-bdd8ee9eddc072e4ffe6590b7e7c3a58cfe4f54a.jpg" },
-    ]
+        {
+            title: "Planta de Tratamiento",
+            description: "Sumérgete en la infraestructura que convierte el agua cruda en potable de manera eficiente.",
+            img: "https://cdn.hswstatic.com/gif/bottled-water-5.jpg"
+        },
+        {
+            title: "Tecnología de Filtración Avanzada",
+            description: "Conoce los sistemas que garantizan la pureza y seguridad en cada gota de agua.",
+            img: "https://media.rnztools.nz/rnz/image/upload/s--G5a20yIh--/c_scale,f_auto,q_auto,w_1050/v1643736132/4O95RKB_copyright_image_120791?_a=BACCd2AD"
+        },
+        {
+            title: "Proceso de Embotellado Inteligente",
+            description: "Observa cómo se embotella el agua con precisión, limpieza y velocidad.",
+            img: "https://cdn.hswstatic.com/gif/gettyimages-520277484.jpg"
+        },
+        {
+            title: "Control de Calidad en Acción",
+            description: "Asegura que cada botella cumpla con los más altos estándares de calidad.",
+            img: "https://media.npr.org/assets/img/2024/01/09/gettyimages-1258833682-bdd8ee9eddc072e4ffe6590b7e7c3a58cfe4f54a.jpg"
+        }
+    ];
 
     return (
-        <section className="relative overflow-hidden bg-white space-y-24 md:space-y-40 py-12 lg:py-20">
+        <section id="galeria" className="relative overflow-hidden bg-white space-y-24 md:space-y-40 py-12 lg:py-20">
             {/* Carousel section */}
             <div className="w-full relative overflow-visible bg-white mx-auto">
                 <Slider {...settings}>
@@ -75,11 +91,12 @@ export default function Gallery() {
             {/* Alternative section */}
             <div className="flex flex-col lg:flex-row items-center justify-center px-8 md:px-14 lg:px-20">  
                 <div className="lg:w-3/5 flex-1 items-center justify-center space-y-3 lg:px-10 pb-6 lg:pb-0">
-                    <h1 className="text-3xl lg:text-4xl font-bold font-publicsans bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Alternative title</h1>
-                    <h2 className="lg:text-lg text-gray-400 font-medium font-publicsans">Lorem Ipsum is simply dummy text</h2>
-                    <p className="text-sm lg:text-base text-justify font-inter opacity-80 py-6">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
+                    <h1 className="text-3xl lg:text-4xl font-bold font-publicsans bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">¿Quieres ser un aliado de vidActiva?</h1>
+                    <h2 className="lg:text-lg text-gray-400 font-medium font-publicsans">Juntos podemos impulsar una vida más activa y saludable</h2>
+                    <p className="text-sm lg:text-base text-justify font-inter opacity-80 py-6 lg:pr-8">
+                        En vidActiva creemos que la pureza y la vitalidad pueden transformar vidas. Si compartes nuestro compromiso con el bienestar, la innovación y la sostenibilidad, 
+                        queremos que formes parte de nuestra red de aliados. Explora cómo colaborar con nosotros en proyectos que conectan a más personas con hidratación consciente y con 
+                        iniciativas que cuidan de nuestro entorno.
                     </p>
                     <a href="/aliados" className="text-sm lg:text-base float-right lg:float-left text-white font-plusjakarta font-bold bg-[#022D90] hover:bg-[#0140c2] transition-colors duration-300 px-12 py-3 rounded-full">Ver más</a>
                 </div>

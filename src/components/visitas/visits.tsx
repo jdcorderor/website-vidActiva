@@ -9,96 +9,96 @@ export default function Visits() {
     const visits = [
         {
             img: "https://stmaaprodfwsite.blob.core.windows.net/assets/sites/1/2020/09/FactoryLine-243457637_F_C_sergeyklopotov_AdobeStock.jpg",
-            title: "Water Source Evaluation",
-            description: "Inspect the natural spring for flow rate and purity standards.",
-            guide: "Marta Valdés, Engineer",
-            characteristics: ["Source testing", "Environmental compliance", "Logistics check"],
+            title: "Evaluación de Fuente de Agua",
+            description: "Inspeccionar el manantial natural para verificar el caudal y los estándares de pureza.",
+            guide: "Marta Valdés, Ingeniera",
+            characteristics: ["Pruebas de fuente", "Cumplimiento ambiental", "Revisión logística"],
             date: "2025-08-02",
             hour: "08:00 AM"
         },
         {
             img: "https://media.istockphoto.com/id/1369027900/photo/bottling-plant.jpg?s=612x612&w=0&k=20&c=a9dmbUpPzNbUekBeBVuA3cq1VQaKrXSKGJnW-V4K6Rg=",
-            title: "Filtration System Audit",
-            description: "Review the filtration equipment and assess performance metrics.",
-            guide: "José Mena, Technician",
-            characteristics: ["Equipment check", "Technical assessment", "Safety protocols"],
+            title: "Auditoría de Sistema de Filtración",
+            description: "Revisión del equipo de filtración y evaluación de métricas de rendimiento.",
+            guide: "José Mena, Técnico",
+            characteristics: ["Revisión de equipo", "Evaluación técnica", "Protocolos de seguridad"],
             date: "2025-08-02",
             hour: "10:30 AM"
         },
         {
             img: "https://smfgmbh.com/wp-content/uploads/2023/03/how-to-start-water-a-water-company.jpg",
-            title: "Packaging Line Review",
-            description: "Observe bottle filling, sealing and label accuracy.",
-            guide: "Ana Ruiz, Supervisor",
-            characteristics: ["Quality control", "Automation overview", "Product consistency"],
+            title: "Revisión de Línea de Empaque",
+            description: "Observar el llenado de botellas, sellado y precisión de etiquetado.",
+            guide: "Ana Ruiz, Supervisora",
+            characteristics: ["Control de calidad", "Resumen de automatización", "Consistencia del producto"],
             date: "2025-08-09",
             hour: "09:15 AM"
         },
         {
             img: "https://cdn.hswstatic.com/gif/bottled-water-5.jpg",
-            title: "Health & Safety Inspection",
-            description: "Ensure staff compliance and evaluate emergency procedures.",
+            title: "Inspección de Salud y Seguridad",
+            description: "Verificar el cumplimiento del personal y evaluar los procedimientos de emergencia.",
             guide: "Luis Torres, Inspector",
-            characteristics: ["PPE checks", "Facility walkthrough", "Training evaluation"],
+            characteristics: ["Revisión de EPP", "Recorrido por la planta", "Evaluación de formación"],
             date: "2025-08-12",
             hour: "01:45 PM"
         },
         {
             img: "https://www.ecan.govt.nz/assets/Uploads/News-and-events/News-stories/November-2018/ECan-News-item-Water-bottling.jpg",
-            title: "Marketing Showcase Visit",
-            description: "Present branding initiatives to potential partners.",
-            guide: "Carla Méndez, Brand Lead",
-            characteristics: ["Presentation", "Brand storytelling", "Product sampling"],
+            title: "Visita de Presentación de Marketing",
+            description: "Presentar iniciativas de marca a socios potenciales.",
+            guide: "Carla Méndez, Líder de Marca",
+            characteristics: ["Presentación", "Narrativa de marca", "Muestras de producto"],
             date: "2025-08-16",
             hour: "03:00 PM"
         },
         {
             img: "https://stmaaprodfwsite.blob.core.windows.net/assets/sites/1/2020/09/FactoryLine-243457637_F_C_sergeyklopotov_AdobeStock.jpg",
-            title: "Supplier Coordination Meeting",
-            description: "Align logistics and delivery timelines with bottle supplier.",
-            guide: "Juan Peña, Logistics chief",
-            characteristics: ["Supply chain", "Contract check", "Delivery planning"],
+            title: "Reunión de Coordinación con Proveedores",
+            description: "Alinear logística y cronograma de entregas con el proveedor de botellas.",
+            guide: "Juan Peña, Jefe de Logística",
+            characteristics: ["Cadena de suministro", "Revisión de contrato", "Planificación de entregas"],
             date: "2025-08-20",
             hour: "11:00 AM"
         },
         {
             img: "https://media.istockphoto.com/id/1369027900/photo/bottling-plant.jpg?s=612x612&w=0&k=20&c=a9dmbUpPzNbUekBeBVuA3cq1VQaKrXSKGJnW-V4K6Rg=",
-            title: "Wastewater Treatment Check",
-            description: "Review system efficiency and test post-treatment samples.",
-            guide: "Laura Gómez, Environmental Officer",
-            characteristics: ["Sustainability", "System monitoring", "Compliance"],
+            title: "Revisión de Tratamiento de Aguas Residuales",
+            description: "Evaluar la eficiencia del sistema y analizar muestras post-tratamiento.",
+            guide: "Laura Gómez, Encargada Ambiental",
+            characteristics: ["Sostenibilidad", "Monitoreo del sistema", "Cumplimiento"],
             date: "2025-08-24",
             hour: "08:45 AM"
         },
         {
             img: "https://smfgmbh.com/wp-content/uploads/2023/03/how-to-start-water-a-water-company.jpg",
-            title: "R&D Flavor Testing",
-            description: "Experiment with mineral-infused flavor profiles.",
-            guide: "Ricardo Salas, Lab Scientist",
-            characteristics: ["Taste trials", "Innovation", "Ingredient analysis"],
+            title: "Pruebas de Sabor en I+D",
+            description: "Experimentar con perfiles de sabor mineralizados.",
+            guide: "Ricardo Salas, Científico de Laboratorio",
+            characteristics: ["Pruebas de sabor", "Innovación", "Análisis de ingredientes"],
             date: "2025-08-29",
             hour: "02:30 PM"
         },
         {
             img: "https://cdn.hswstatic.com/gif/bottled-water-5.jpg",
-            title: "Customer Experience Tour",
-            description: "Invite retail clients to experience bottling and branding.",
-            guide: "Paula Díaz, Sales Coordinator",
-            characteristics: ["Retail insights", "Networking", "Product spotlight"],
+            title: "Recorrido de Experiencia del Cliente",
+            description: "Invitar a clientes minoristas a conocer el embotellado y la marca.",
+            guide: "Paula Díaz, Coordinadora de Ventas",
+            characteristics: ["Perspectiva comercial", "Networking", "Destacado del producto"],
             date: "2025-09-03",
             hour: "10:00 AM"
         },
         {
             img: "https://www.ecan.govt.nz/assets/Uploads/News-and-events/News-stories/November-2018/ECan-News-item-Water-bottling.jpg",
-            title: "Maintenance System Check",
-            description: "Validate preventive maintenance workflows and software.",
-            guide: "Víctor Moreno, Operations Head",
-            characteristics: ["Efficiency", "Preventive routines", "System logs"],
+            title: "Revisión del Sistema de Mantenimiento",
+            description: "Validar los flujos de mantenimiento preventivo y el software asociado.",
+            guide: "Víctor Moreno, Jefe de Operaciones",
+            characteristics: ["Eficiencia", "Rutinas preventivas", "Registros del sistema"],
             date: "2025-09-06",
             hour: "07:30 AM"
         }
     ];
-    
+
     // Filtered visits array
     const filteredVisits = visits.filter((visit) => 
         (keyword === "") || 
@@ -142,9 +142,9 @@ export default function Visits() {
                                         <p><span className="text-xs lg:text-base text-gray-900 font-bold font-publicsans">{visit.guide.split(",")[0]}</span> -{" "}<span className="text-xs lg:text-base text-gray-900 text-sm">{visit.guide.split(",")[1]}</span></p>
                                     </div>
 
-                                    <div className="w-full md:w-1/2 lg:w-full [@media(min-width:700px)]:h-48 lg:h-50 lg:px-6">
+                                    <div className="w-fit md:w-1/2 lg:w-fit [@media(min-width:700px)]:h-48 lg:h-50 lg:px-6">
                                         <div className="flex items-start justify-end">
-                                            <a href="/eventos" className="text-center text-white text-xs font-plusjakarta font-medium bg-[#003366] hover:bg-[#022D90] transition-colors duration-300 rounded-full px-8 py-2 cursor-pointer">Book now</a>
+                                            <a href="/eventos" className="text-center text-white text-xs font-plusjakarta font-medium bg-[#003366] hover:bg-[#022D90] transition-colors duration-300 rounded-full px-8 py-2 cursor-pointer">Asiste</a>
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@ export default function Visits() {
                 )}
 
                 {(filteredVisits.length === 0) && (
-                    <div className="w-full flex justify-center text-sm text-gray-500 py-6">No se encontraron coincidencias. Por favor, verifique otras fechas y/o modifique su búsqueda.</div>
+                    <div className="w-full flex justify-center text-sm text-gray-500 text-center py-6">No se encontraron coincidencias. Por favor, modifique su búsqueda.</div>
                 )}
             </div>
         </section>

@@ -4,15 +4,15 @@ import { FaThreads } from 'react-icons/fa6';
 export default function Footer() {
     // Mock data for the footer
     const links = [
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" },
-        { text: "Catálogo", href: "#" }
+        { text: "Inicio", href: "#inicio" },
+        { text: "Nosotros", href: "#nosotros" },
+        { text: "Valores", href: "#valores" },
+        { text: "Productos", href: "#productos" },
+        { text: "Aliados", href: "#aliados" },
+        { text: "Eventos", href: "#eventos" },
+        { text: "Galería", href: "#galeria" },
+        { text: "Contacto", href: "#contacto" },
+        { text: "Catálogo", href: "/CATÁLOGO VIDACTIVA.pdf" }
     ];
 
     return (

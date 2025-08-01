@@ -61,11 +61,20 @@ export default function About() {
 
     // Mock data for cards
     const cards = [
-        { title: "Misión", text: "Impulsar una vida activa y saludable a través de la hidratación más pura y natural. Ofrecemos VidActiva, el agua mineral que revitaliza cada paso de tu día." },
-        { title: "Visión", text: "Ser el referente de hidratación consciente y saludable en Venezuela, inspirando a una comunidad activa y vibrante." },
-        { title: "Valores", text: "Lorem ipsum is simply dummy text of the printing and typesetting industry." },
-    ]
-    
+        {
+            title: "Misión",
+            text: "Impulsar una vida activa y saludable a través de la hidratación más pura y natural. Ofrecemos vidActiva, el agua mineral que revitaliza cada paso de tu día."
+        },
+        {
+            title: "Visión",
+            text: "Ser la marca líder de hidratación consciente en Venezuela, promoviendo bienestar, sostenibilidad y conexión auténtica con nuestra comunidad."
+        },
+        {
+            title: "Valores",
+            text: "Nuestros valores reflejan lo que nos mueve: vitalidad, compromiso, bienestar genuino, conexión con la naturaleza, innovación constante y transparencia en cada acción."
+        }
+    ];
+
     return (
         <section id="nosotros" className="relative overflow-hidden bg-white">
             {/* About us section */}
@@ -75,8 +84,15 @@ export default function About() {
                 </div>
                 <div className="w-full lg:w-3/5 items-center justify-center space-y-6 px-8 md:px-16 lg:px-20 md:pt-16 lg:pt-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-publicsans bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Somos vidActiva</h1>
-                    <p className="text-sm lg:text-base text-justify opacity-80">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                    <p className="text-sm lg:text-base text-justify opacity-80">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. </p>
+                    <p className="text-sm lg:text-base text-justify opacity-80">
+                        En vidActiva creemos que cada gota cuenta. Nuestra historia está escrita con compromiso, innovación y respeto por la naturaleza. A lo largo del tiempo, hemos impulsado una 
+                        hidratación consciente, conectando a las personas con una vida activa, sostenible y llena de energía. Desde nuestros orígenes hasta hoy, seguimos avanzando con transparencia 
+                        y pasión por lo que hacemos.
+                    </p>
+                    <p className="text-sm lg:text-base text-justify opacity-80">
+                        Somos más que una embotelladora: somos un movimiento que promueve el bienestar auténtico y la conexión con lo esencial. Nuestra agua mineral 100% libre de sodio representa
+                        pureza en estado líquido, pensada para revitalizar el cuerpo y acompañar a quienes eligen vivir en equilibrio.
+                    </p>
                 </div>
             </div>
 
@@ -101,15 +117,16 @@ export default function About() {
                 <div className="w-full items-center space-y-6 px-0 md:px-5 lg:px-20">
                     <h1 className="text-3xl lg:text-4xl font-bold font-publicsans bg-[#0EA5E9] bg-clip-text text-transparent">Nuestros valores</h1>
                     <p className="text-sm lg:text-base text-justify opacity-80">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. 
-                        When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
+                        En vidActiva, nuestros valores son el reflejo de lo que somos y lo que queremos construir. Cada uno representa un compromiso genuino con la pureza, el bienestar y la innovación. 
+                        Creemos en la energía que fluye desde lo natural, en la responsabilidad de cuidar nuestro entorno y en la transparencia como principio esencial. 
+                        Juntos, estos valores nos impulsan a crear conexiones auténticas, productos de calidad y una comunidad vibrante que comparte nuestra visión de una vida activa y consciente.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-0 md:px-5 lg:px-20">
                     {cards.map((card, index) => (
-                        <div key={index} className="w-full bg-white border border-gray-300 rounded-lg shadow-md space-y-2 p-6">
-                            <h2 className="text-lg lg:text-xl font-semibold text-gray-900">{card.title}</h2>
-                            <p className="text-sm lg:text-base opacity-80">{card.text}</p>
+                        <div key={index} className="w-full bg-white border border-gray-300 rounded-lg shadow-md space-y-3 p-6">
+                            <h2 className="text-lg lg:text-xl text-center font-semibold text-gray-900">{card.title}</h2>
+                            <p className="text-sm lg:text-base text-center opacity-80 px-6">{card.text}</p>
                         </div>
                     ))}
                 </div>

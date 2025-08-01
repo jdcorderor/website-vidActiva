@@ -33,7 +33,7 @@ body {
 .flip-card {
   perspective: 1000px;
   width: 100%;
-  height: 410px;
+  height: 460px;
 }
 
 .flip-card-inner {
