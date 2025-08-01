@@ -54,7 +54,7 @@ export default function Banner() {
 
             {/* Higher curve */}
             <div className="absolute w-full top-0 overflow-hidden leading-none z-0">
-                <svg viewBox="0 0 1440 250" preserveAspectRatio="none" className="w-full h-[130px]">
+                <svg viewBox="0 0 1440 250" preserveAspectRatio="none" className="w-full h-0 md:h-[130px]">
                     <path d="M0,0 L0,235 C300,280 350,80 600,15 C600,15 655,3 680,0 Z" fill="#ffffff"/>
                 </svg>
             </div>
@@ -64,7 +64,7 @@ export default function Banner() {
                 <div>
                     <img src="/decoration.png" className="hidden lg:block relative -translate-x-10 -translate-y-20 z-15" width={400} height={400} />
                 </div>
-                <div className="relative text-left space-y-5 px-12 lg:px-0 py-4 md:py-12 z-15">
+                <div className="relative text-center [@media(min-width:700px)]:text-left space-y-5 px-8 [@media(min-width:700px)]:px-12 [@media(min-width:900px)]:px-0 py-4 md:py-12 z-15">
                     <h1 className="text-4xl lg:text-5xl font-publicsans font-medium">Tu salud empieza <br /> con <span className="font-bold">vidActiva</span></h1>
                     <p className="text-sm md:text-base lg:text-lg font-montserrat">Calidad en cada botella, bienestar en cada día.</p>
                     <a href="#valores" className="inline-block text-sm md:text-base lg:text-lg font-semibold hover:font-extrabold bg-[#3D9C55] hover:bg-[#2e7f41] transition-all duration-300 py-2 px-12 rounded-3xl cursor-pointer">Nuestros valores</a>
@@ -74,7 +74,7 @@ export default function Banner() {
 
             {/* Lower curve */}
             <div className="absolute w-full bottom-0 overflow-hidden leading-none z-0">
-                <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="w-full h-[80px] md:h-[130px]">
+                <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="w-full h-[60px] md:h-[130px]">
                     <path d="M0,0 C400,-5 780,150 1100,145 C1100,145 1360,150 1440,120 L1440,150 L0,150 Z" fill="#ffffff"/>
                 </svg>
             </div>

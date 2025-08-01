@@ -1,49 +1,7 @@
-import { useState, useEffect } from "react";
-import { FaSearch, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
 export default function Visits() {
-    // States for dates array and selected date
-    const [dates, setDates] = useState<Date[]>([]);
-    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-    
-    // Effect to generate dates automatically
-    useEffect(() => {
-        generateDates();
-    }, []);
-    
-    // Function for date generation
-    const generateDates = () => {
-        const today = new Date();
-        const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        
-        const generatedDates: Date[] = [];
-        for (let i = 0; i < 62; i++) {
-            const date = new Date();
-            date.setDate(today.getDate() + i);
-            generatedDates.push(date);
-        }
-        
-        setDates(generatedDates);
-    };
-    
-    // Function for day formatting
-    const formatDay = (date: Date) => {
-        return date.getDate();
-    };
-    
-    // Function for weekday formatting
-    const formatWeekday = (date: Date) => {
-        const weekdays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-        return weekdays[date.getDay()];
-    };
-    
-    // Date selection handler
-    const handleDateSelect = (date: Date) => {
-        setSelectedDate(date);
-    };
-
-    // --------------------------------------------------------------------------
-
     // State to manage keyword
     const [keyword, setKeyword] = useState<string>("");
 
@@ -142,20 +100,14 @@ export default function Visits() {
     ];
     
     // Filtered visits array
-    const filteredVisits = visits.filter((visit) => {
-        return ((keyword === "" && !selectedDate && visit.date) ||
-        (keyword === "" && visit.date === selectedDate?.toISOString().split("T")[0]) ||
-        (keyword != "" && !selectedDate && visit.date && 
-            (visit.title.toLowerCase().includes(keyword.toLowerCase()) ||
-            visit.description.toLowerCase().includes(keyword.toLowerCase()) ||
+    const filteredVisits = visits.filter((visit) => 
+        (keyword === "") || 
+        (keyword != "" && 
+            (visit.title.toLowerCase().includes(keyword.toLowerCase()) || 
+            visit.description.toLowerCase().includes(keyword.toLowerCase()) || 
             visit.guide.toLowerCase().includes(keyword.toLowerCase()))
-        ) ||
-        (keyword != "" && visit.date === selectedDate?.toISOString().split("T")[0] &&
-            (visit.title.toLowerCase().includes(keyword.toLowerCase()) ||
-            visit.description.toLowerCase().includes(keyword.toLowerCase()) ||
-            visit.guide.toLowerCase().includes(keyword.toLowerCase()))
-        ))
-    });
+        )
+    );
 
     return (
         <section className="bg-white">
@@ -168,44 +120,10 @@ export default function Visits() {
                     <input type="text" placeholder="Buscar..." className="search flex w-40 md:w-60 lg:w-90 bg-white outline-none text-sm text-gray-700 border border-gray-300 rounded-full px-6 py-2 my-auto" value={keyword} onChange={(e) => setKeyword(e.target.value)}/><FaSearch className="w-10 h-5 text-gray-500 flex-shrink-0" />
                 </div>
             </nav>
-            
-            {/* Calendar section */}
-            <div className="w-full justify-center overflow-hidden px-[0.2rem] [@media(min-width:700px)]:px-14 lg:px-8 pt-36 pb-15">
-                <div className="text-center my-2">
-                    <p className="text-lg text-gray-800 font-semibold">
-                        {selectedDate ? (selectedDate.toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'})) : (new Date().toLocaleDateString('es-ES', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}))}
-                    </p>
-                </div>
-
-                <div className="w-full flex items-center justify-center p-8">
-                    <button className="w-12 h-12 transform text-gray-300 text-2xl rounded-full p-2 cursor-pointer" aria-label="Scroll left" onClick={() => document.querySelector('.scroll-container')?.scrollBy({ left: -192, behavior: 'smooth' })}>
-                        <FaArrowLeft></FaArrowLeft>
-                    </button>
-
-                    <div className="w-full lg:w-1/3 flex space-x-4 pl-4 mx-4 overflow-hidden scroll-container scroll-smooth border border-white">
-                        {dates.map((date, index) => {
-                            const isSelected = selectedDate && selectedDate.getDate() === date.getDate() && selectedDate.getMonth() === date.getMonth() && selectedDate.getFullYear() === date.getFullYear();
-
-                            return (
-                                <div key={index} id={`date-${index}`} className={`flex flex-col items-center justify-center cursor-pointer ${isSelected ? 'font-semibold' : ''}`} onClick={() => { if (!isSelected) { handleDateSelect(date) } else { setSelectedDate(null) }}}>
-                                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${isSelected ? 'bg-[#003366] text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200 border-3 border-blue-100'}`}>
-                                        {formatDay(date)}
-                                    </div>
-                                    <span className="text-xs mt-1 text-gray-500">{formatWeekday(date)}</span>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    <button className="w-12 h-12 transform text-gray-300 text-2xl rounded-full p-2 cursor-pointer" aria-label="Scroll right" onClick={() => document.querySelector('.scroll-container')?.scrollBy({ left: 192, behavior: 'smooth' })}>
-                        <FaArrowRight></FaArrowRight>
-                    </button>
-                </div>
-            </div>
 
             {/* Visits section */}
-            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 py-4 mx-8 lg:mx-12 my-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
-            <div className="flex bg-gray-50 rounded-lg px-8 lg:px-12 mx-8 lg:mx-12 mb-10 lg:mb-20 ">
+            <h2 className="flex text-4xl font-publicsans font-bold border-b border-gray-100 pt-36 pb-4 mx-8 lg:mx-12 my-6 bg-gradient-to-r from-[#1E9DF1] via-[#022D90] to-[#022D90] bg-clip-text text-transparent">Próximas visitas</h2>
+            <div className="flex bg-gray-50 rounded-lg px-8 lg:px-12 mx-8 lg:mx-12 mb-15 lg:mb-25 ">
                 {(filteredVisits.length != 0) && (
                     <div className="w-full grid grid-cols-1 rounded-xl mx-auto">
                         {filteredVisits.map((visit, index) => (

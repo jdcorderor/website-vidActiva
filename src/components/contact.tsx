@@ -33,19 +33,19 @@ export default function Contact() {
     };
 
     return (
-        <section id="contacto" className="relative overflow-hidden bg-white mx-7 md:mx-10 lg:mx-40 py-12 lg:py-20">
+        <section id="contacto" className="relative overflow-hidden bg-white mx-7 [@media(min-width:700px)]:mx-25 [@media(min-width:800px)]:mx-10 [@media(min-width:900px)]:mx-40 py-12 lg:py-20">
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-start justify-between gap-6 lg:gap-16 lg:px-10">
                 {/* Contact info */}
                 <div className="flex-1 md:w-1/2 flex flex-col justify-center space-y-4 md:px-6 lg:px-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-black font-publicsans font-semibold">Contáctanos</h2>
-                    <div className="py-4 lg:py-6">
+                    <div className="py-2 md:py-4 lg:py-6">
                         <p className="text-sm lg:text-base font-inter text-justify">
                             ¿Tienes preguntas o necesitas más información sobre nuestros productos y servicios?
                             Nuestro equipo está listo para ayudarte.
                         </p>
                     </div> 
-                    <div className="bg-gray-100 space-y-1 p-3 md:p-4 rounded-lg">
+                    <div className="hidden md:flex flex-col bg-gray-50 space-y-1 p-3 md:p-4 rounded-lg">
                         <h4 className="text-base md:text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
                         <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Dirección:</span> Calle 123, Ciudad, País</p>
                         <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Teléfono:</span> +58 424-4483713</p>
@@ -56,7 +56,7 @@ export default function Contact() {
 
                 {/* Contact form */}
                 <div className="w-full md:w-1/2 flex justify-center font-inter">
-                    <form onSubmit={handleSubmit} className="w-full md:w-4/5 lg:w-3/5 flex flex-col space-y-2 py-4">
+                    <form onSubmit={handleSubmit} className="w-full md:w-4/5 lg:w-3/5 flex flex-col space-y-2 py-0 md:py-4">
                         <label htmlFor="name">Nombre completo *</label>
                         <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Nombre completo" required />
                         <label htmlFor="email">Correo electrónico *</label>
@@ -78,6 +78,17 @@ export default function Contact() {
                         <button type="submit" className="w-[99%] text-sm text-white font-plusjakarta font-bold bg-[#022D90] hover:bg-[#0140c2] transition-colors duration-300 px-10 py-2 mx-auto rounded-full">Enviar</button>
                     </form>
                 </div>
+
+                {/* Alternative contact info */}
+                <div className="w-full flex md:hidden justify-center space-y-4 my-4">
+                    <div className="w-full flex flex-col bg-gray-50 space-y-1 p-4 rounded-lg">
+                        <h4 className="text-base md:text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
+                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Dirección:</span> Calle 123, Ciudad, País</p>
+                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Teléfono:</span> +58 424-4483713</p>
+                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Correo electrónico:</span> atencion@vidactiva.com</p>
+                        <p className="text-sm md:text-xs lg:text-base"><span className="font-semibold">Horario:</span> Lunes a Viernes, 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div> 
             </div>
         </section>
     )
