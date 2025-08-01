@@ -84,9 +84,9 @@ export default function About() {
             <div className="w-full relative bg-white overflow-visible py-8 lg:py-20 md:px-0 lg:px-0 mx-auto">
                 <Slider {...settings}>
                     {slides.map((slide, index) => (
-                        <div key={index} className="justify-center">
-                            <div className="relative w-[22.5rem] h-[27.5rem] md:w-[24rem] md:h-[28.75rem] lg:w-[25rem] lg:h-[30rem] overflow-hidden rounded-2xl mx-auto">
-                                <img src={slide.src} alt={`${index}`} className="w-full h-full object-cover rounded-xl"/>
+                        <div key={index} className="flex justify-center">
+                            <div className="relative w-full max-w-[25rem] h-[30rem] overflow-hidden rounded-2xl mx-auto">
+                                <img src={slide.src} alt={`Slide ${index}`} className="w-full h-full object-cover rounded-xl"/>
                                 <div className="absolute inset-0 flex items-end justify-start bg-black/40">
                                     <h2 className="w-1/4 text-3xl text-white font-montserrat font-semibold drop-shadow-lg py-6 pl-6">{slide.text}</h2>
                                 </div>
