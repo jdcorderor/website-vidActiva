@@ -90,7 +90,7 @@ export default function Contact() {
                     <div className="bg-gray-50 rounded-lg p-4 space-y-2">
                         <h4 className="text-sm lg:text-lg font-inter font-semibold pb-2">Oficina</h4>
                         <ul className="space-y-1">
-                            <li className="text-sm lg:text-base"><strong>Dirección:</strong> Carretera Vieja Tocuyito, Sector Zanjón Dulce, Municipio Libertador, Carabobo</li>
+                            <li className="text-sm lg:text-base"><strong>Dirección:</strong> Carretera Vieja Tocuyito, Sector Zanjón Dulce, Mcpio. Libertador, Carabobo</li>
                             <li className="text-sm lg:text-base"><strong>Teléfono:</strong> +58 424-4483713</li>
                             <li className="text-sm lg:text-base"><strong>Correo electrónico:</strong> embotelladoraactivaca@gmail.com</li>
                             <li className="text-sm lg:text-base"><strong>Horario:</strong> Lunes a Sábado, 9:00 AM - 6:00 PM</li>

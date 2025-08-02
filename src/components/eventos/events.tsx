@@ -177,8 +177,8 @@ export default function Events() {
             {/* Selected event section */}
             <div className="w-full flex px-4 [@media(min-width:700px)]:px-20 pt-40 pb-15 mx-auto" onClick={() => { setShowSlider(true); }}>
                 {selectedEvent && events[parseInt(selectedEvent) - 1] && (
-                    <div className="group relative w-200 mx-auto rounded-2xl" >
-                        <img src={events[parseInt(selectedEvent) - 1].img} alt={events[parseInt(selectedEvent) - 1].title} className="mx-auto rounded-xl"/>
+                    <div className="group relative w-200 min-h-55 mx-auto rounded-2xl" >
+                        <img src={events[parseInt(selectedEvent) - 1].img} alt={events[parseInt(selectedEvent) - 1].title} className="min-h-55 object-cover rounded-xl mx-auto"/>
                         <div className="absolute inset-0 flex flex-col justify-end rounded-xl px-4 [@media(min-width:700px)]:px-6 [@media(min-width:840px)]:px-8 [@media(min-width:700px)]:py-1 [@media(min-width:840px)]:py-2 mx-auto bg-black/60">
                             <div className="py-4 [@media(min-width:840px)]:py-6">
                                 <h2 className="text-xl [@media(min-width:700px)]:text-2xl [@media(min-width:840px)]:text-3xl text-white font-montserrat font-semibold drop-shadow-lg">
