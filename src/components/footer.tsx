@@ -17,10 +17,10 @@ export default function Footer() {
 
     return (
         <section className="bg-[#F7F7F7] text-gray-600 py-8">
-            <div className="w-full flex flex-wrap items-center justify-center md:justify-between py-12 mx-auto">             
+            <div className="w-full flex flex-wrap items-center justify-center md:justify-between py-4 mx-auto">             
                 {/* Decoration */}
-                <div className="hidden lg:flex w-1/5 relative overflow-hidden -translate-x-25 z-10">
-                    <img src="https://pngimg.com/d/water_PNG50134.png" className="w-full h-full object-contain"/>
+                <div className="hidden lg:flex w-1/5 h-50 relative overflow-hidden -translate-x-35 z-10">
+                    <img src="/footer/decoration.png" className="w-full h-full object-contain"/>
                 </div>
                 
                 {/* Links */}
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
             
             {/* Copyright */}
-            <div className="w-full text-center text-xs text-gray-500 px-12 md:px-0 pb-6">
+            <div className="w-full text-center text-xs text-gray-500 px-12 md:px-0 pb-6 mt-6">
                 Copyright © 2025 Embotelladora Activa C.A. Todos los derechos reservados.
             </div>
         </section>

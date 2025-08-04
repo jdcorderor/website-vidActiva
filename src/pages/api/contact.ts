@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
         // JSON file path
         const filePath = path.resolve("src/data/messages.json");
 
-        // Initialize an empty array to hold existing items
+        // Define an empty array to hold existing items
         let items: any[] = [];
         
         // Read existing items from the JSON file

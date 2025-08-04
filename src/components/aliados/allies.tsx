@@ -45,15 +45,21 @@ export default function Allies() {
                 </p>
                 <div className="w-full flex flex-col py-6 lg:py-8 px-10 lg:px-20 mt-8 bg-gray-50 rounded-xl">
                     {steps.map((step) => (
-                    <div key={step.id} className="flex flex-col [@media(min-width:700px)]:flex-row items-center gap-5 [@media(min-width:700px)]:gap-8 lg:gap-6 py-10 [@media(min-width:700px)]:py-6">
-                        <div className="w-20 [@media(min-width:700px)]:w-24 [@media(min-width:840px)]:w-22 h-20 flex items-center justify-center border border-blue-100 bg-[#022D90] rounded-full">
-                            <span className="text-4xl font-extrabold text-white">{step.id}</span>
+                        <div key={step.id} className="flex flex-col sm:flex-row items-center gap-5 sm:gap-8 lg:gap-6 py-10 sm:py-6">
+                            <div className="w-20 sm:w-16 md:w-20 lg:w-22 aspect-square flex items-center justify-center border border-blue-100 bg-[#022D90] rounded-full shrink-0">
+                                <span className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white">
+                                    {step.id}
+                                </span>
+                            </div>
+                            <div className="w-full space-y-2 text-center sm:text-left">
+                                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#022D90]">
+                                    {step.title}
+                                </h2>
+                                <p className="text-sm sm:text-sm md:text-base lg:text-lg opacity-90 leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
                         </div>
-                        <div className="w-full h-20 space-y-2 text-center [@media(min-width:700px)]:text-left">
-                            <h2 className="text-xl [@media(min-width:700px)]:text-2xl [@media(min-width:800px)]:text-4xl font-semibold text-[#022D90]">{step.title}</h2>
-                            <p className="text-sm md:text-base lg:text-lg opacity-90 leading-relaxed">{step.description}</p>
-                        </div>
-                    </div>
                     ))}
                 </div>
             </div>

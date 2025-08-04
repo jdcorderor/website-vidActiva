@@ -47,16 +47,46 @@ export default function About() {
 
     // Mock data for slides
     const slides = [
-        { src: "https://www.shape.com/thmb/XhaeY6hfYXOUEmpvxZKjOi_-H5A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/running-longer-or-faster-31e97070bda14ffc8afdea52094504c7.jpg", text: "Somos vidActiva" },
-        { src: "https://thumbs.dreamstime.com/b/active-young-brunette-woman-running-single-park-summer-healthy-perfect-tone-body-fit-workout-outside-lifestyle-concept-vertical-143896206.jpg", text: "Somos vidActiva" },
-        { src: "https://expertosenmedicinaestetica.es/wp-content/uploads/2017/03/amar-running.jpg", text: "Somos vidActiva" },
-        { src: "https://www.mensjournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MjA0NjU0OTA3MTEzMjg1MjIx/fitness-health-and-city-man-running-on-street-with-motivation-healthy-mindset-and-summer-morning-energy-for-training-urban-workout-cardio-exercise-and-runner-on-bridge-focus-on-sports-lifestyle.jpg", text: "Somos vidActiva" },
-        { src: "https://hips.hearstapps.com/hmg-prod/images/man-running-on-track-royalty-free-image-1674216446.jpg", text: "Somos vidActiva" },
-        { src: "https://www.hola.com/horizon/43/5c8fd02e953d-gettyimages-1445516635.jpg", text: "Somos vidActiva" },
-        { src: "https://img.saludsavia.com/wp-content/uploads/2024/07/entrenamiento-funcional-mejorar-rendimiento-trabajo.jpg", text: "Somos vidActiva" },
-        { src: "https://www.mueveteconbea.com/wp-content/uploads/2023/11/entrenamiento-funcional-clases-1024x576.jpg", text: "Somos vidActiva" },
-        { src: "https://pro.queondaus.com/wp-content/uploads/2023/10/Familia-.webp", text: "Somos vidActiva" },
-        { src: "https://queridoseducadores.com/wp-content/uploads/2025/01/family-7392843_1280.jpg", text: "Somos vidActiva" },
+        { 
+            src: "https://www.shape.com/thmb/XhaeY6hfYXOUEmpvxZKjOi_-H5A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/running-longer-or-faster-31e97070bda14ffc8afdea52094504c7.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://thumbs.dreamstime.com/b/active-young-brunette-woman-running-single-park-summer-healthy-perfect-tone-body-fit-workout-outside-lifestyle-concept-vertical-143896206.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://expertosenmedicinaestetica.es/wp-content/uploads/2017/03/amar-running.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://www.mensjournal.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MjA0NjU0OTA3MTEzMjg1MjIx/fitness-health-and-city-man-running-on-street-with-motivation-healthy-mindset-and-summer-morning-energy-for-training-urban-workout-cardio-exercise-and-runner-on-bridge-focus-on-sports-lifestyle.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://hips.hearstapps.com/hmg-prod/images/man-running-on-track-royalty-free-image-1674216446.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://www.hola.com/horizon/43/5c8fd02e953d-gettyimages-1445516635.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://img.saludsavia.com/wp-content/uploads/2024/07/entrenamiento-funcional-mejorar-rendimiento-trabajo.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://www.mueveteconbea.com/wp-content/uploads/2023/11/entrenamiento-funcional-clases-1024x576.jpg", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://pro.queondaus.com/wp-content/uploads/2023/10/Familia-.webp", 
+            text: "Somos vidActiva" 
+        },
+        { 
+            src: "https://queridoseducadores.com/wp-content/uploads/2025/01/family-7392843_1280.jpg", 
+            text: "Somos vidActiva" 
+        },
     ];
 
     // Mock data for cards

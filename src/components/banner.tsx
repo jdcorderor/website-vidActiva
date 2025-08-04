@@ -62,14 +62,14 @@ export default function Banner() {
             {/* Hero section */}
             <div className="relative flex flex-col md:flex-row h-90 md:h-150 pt-8 md:pt-12 my-2 md:my-4 z-10">
                 <div>
-                    <img src="/decoration.png" className="hidden lg:block relative -translate-x-10 -translate-y-20 z-15" width={400} height={400} />
+                    <img src="/banner/decoration.png" className="hidden lg:block relative -translate-x-10 -translate-y-20 z-15" width={400} height={400} />
                 </div>
                 <div className="relative text-center [@media(min-width:700px)]:text-left space-y-5 px-8 [@media(min-width:700px)]:px-12 [@media(min-width:900px)]:px-0 py-4 md:py-12 z-15">
                     <h1 className="text-4xl lg:text-5xl font-publicsans font-medium">Tu salud empieza <br /> con <span className="font-bold">vidActiva</span></h1>
                     <p className="text-sm md:text-base lg:text-lg font-montserrat">Calidad en cada botella, bienestar en cada día.</p>
                     <a href="#valores" className="inline-block text-sm md:text-base lg:text-lg font-semibold hover:font-extrabold bg-[#3D9C55] hover:bg-[#2e7f41] transition-all duration-300 py-2 px-12 rounded-3xl cursor-pointer">Nuestros valores</a>
                 </div>
-                <img src="/banner.png" className="hidden [@media(min-width:700px)]:block relative -translate-y-60 md:-translate-y-10 lg:-translate-y-20 translate-x-50 md:translate-x-0 lg:translate-x-0 mx-auto z-15 w-[250px] md:w-[300px] lg:w-[390px] h-[350px] md:h-[400px] lg:h-[550px]" />
+                <img src="/banner/banner.png" className="hidden [@media(min-width:700px)]:block relative -translate-y-60 md:-translate-y-10 lg:-translate-y-20 translate-x-50 md:translate-x-0 lg:translate-x-0 mx-auto z-15 w-[250px] md:w-[300px] lg:w-[390px] h-[350px] md:h-[400px] lg:h-[550px]" />
             </div>
 
             {/* Lower curve */}
